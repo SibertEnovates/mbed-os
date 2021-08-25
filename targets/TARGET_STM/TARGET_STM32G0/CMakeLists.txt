@@ -7,6 +7,7 @@ add_subdirectory(TARGET_STM32G041xx EXCLUDE_FROM_ALL)
 add_subdirectory(TARGET_STM32G070xx EXCLUDE_FROM_ALL)
 add_subdirectory(TARGET_STM32G071xx EXCLUDE_FROM_ALL)
 add_subdirectory(TARGET_STM32G081xx EXCLUDE_FROM_ALL)
+add_subdirectory(TARGET_STM32G0B0xx EXCLUDE_FROM_ALL)
 add_subdirectory(STM32Cube_FW EXCLUDE_FROM_ALL)
 
 add_library(mbed-stm32g0 INTERFACE)

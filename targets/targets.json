@@ -2712,6 +2712,25 @@
         ],
         "device_name": "STM32G071RBTx"
     },
+    "MCU_STM32G0B0xE": {
+        "inherits": [
+            "MCU_STM32G0"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32G0B0xx"
+        ],
+        "macros_add": [
+            "STM32G0B0xx"
+        ],
+        "macros_remove": [
+            "EXTRA_IDLE_STACK_REQUIRED",
+            "MBED_TICKLESS"
+        ],
+        "device_has_remove": [
+            "LPTICKER"
+        ]
+    },
     "MCU_STM32G4": {
         "inherits": [
             "MCU_STM32"

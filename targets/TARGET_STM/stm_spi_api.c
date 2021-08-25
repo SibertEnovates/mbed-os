@@ -192,14 +192,22 @@ static void _spi_init_direct(spi_t *obj, const spi_pinmap_t *pinmap)
 #if defined SPI2_BASE
     if (spiobj->spi == SPI_2) {
         __HAL_RCC_SPI2_CLK_ENABLE();
+#if defined(STM32G0B0xx)
+        spiobj->spiIRQ = SPI2_3_IRQn;
+#else
         spiobj->spiIRQ = SPI2_IRQn;
+#endif
     }
 #endif
 
 #if defined SPI3_BASE
     if (spiobj->spi == SPI_3) {
         __HAL_RCC_SPI3_CLK_ENABLE();
-        spiobj->spiIRQ = SPI3_IRQn;
+#if defined(STM32G0B0xx)
+        spiobj->spiIRQ = SPI2_3_IRQn;
+#else
+        git spiobj->spiIRQ = SPI3_IRQn;
+#endif
     }
 #endif
 
