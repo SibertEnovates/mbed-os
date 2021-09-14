@@ -2712,7 +2712,16 @@
         ],
         "device_name": "STM32G071RBTx"
     },
-    "MCU_STM32G0B0xE": {
+    "NUCLEO_G0B0RE": {
+        "inherits": [
+            "MCU_STM32G0B0xx"
+        ],
+        "detect_code": [
+            "0799"
+        ],
+        "device_name": "STM32G0B0REx"
+    },
+    "MCU_STM32G0B0xx": {
         "inherits": [
             "MCU_STM32G0"
         ],
