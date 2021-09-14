@@ -2716,6 +2716,16 @@
         "inherits": [
             "MCU_STM32G0B0xx"
         ],
+        "supported_form_factors": [
+            "ARDUINO_UNO"
+        ],
+        "config": {
+            "hse_value": {
+                "help": "HSE default value is 25MHz in HAL",
+                "value": "8000000",
+                "macro_name": "HSE_VALUE"
+            }
+        },
         "detect_code": [
             "0799"
         ],
