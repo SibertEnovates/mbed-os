@@ -8,7 +8,7 @@
 ;*                      - Set the vector table entries with the exceptions ISR address
 ;*                      - Branches to __main in the C library (which eventually
 ;*                        calls main()).
-;*                      After Reset the CortexM0 processor is in Thread mode,
+;*                      After Reset the CortexM0+ processor is in Thread mode,
 ;*                      priority is Privileged, and the Stack is set to Main.
 ;* <<< Use Configuration Wizard in Context Menu >>>
 ;****************************************************************************** 
@@ -217,28 +217,6 @@ USART3_4_5_6_IRQHandler
 ;*******************************************************************************
 ; User Stack and Heap initialization
 ;*******************************************************************************
-                 IF      :DEF:__MICROLIB
-
-                 EXPORT  __initial_sp
-                 EXPORT  __heap_base
-                 EXPORT  __heap_limit
-
-                 ELSE
-
-                 IMPORT  __use_two_region_memory
-                 EXPORT  __user_initial_stackheap
-
-__user_initial_stackheap
-
-                 LDR     R0, =  Heap_Mem
-                 LDR     R1, =(Stack_Mem + Stack_Size)
-                 LDR     R2, = (Heap_Mem +  Heap_Size)
-                 LDR     R3, = Stack_Mem
-                 BX      LR
-
-                 ALIGN
-
-                 ENDIF
 
                  END
 
